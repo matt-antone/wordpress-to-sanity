@@ -1,0 +1,21 @@
+query GetYouTubes {
+  youtubes(first: 1000) {
+    nodes {
+      id
+      content
+      date
+      featuredImage {
+        node {
+          caption
+          altText
+          id
+          sourceUrl
+          title
+        }
+      }
+      youtubeGallery {
+        youtubeGallery
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+query GetPracticeAreas {
+  practiceAreas(first: 100000) {
+    nodes {
+      content
+      date
+      excerpt
+      menuOrder
+      seo {
+        title
+        metaDesc
+      }
+      slug
+      title
+    }
+  }
+}

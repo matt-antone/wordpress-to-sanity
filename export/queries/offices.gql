@@ -1,0 +1,26 @@
+query GetOffices {
+  offices {
+    nodes {
+      content
+      date
+      featuredImage {
+        node {
+          id
+          title
+          sourceUrl
+        }
+      }
+      title
+      slug
+      officesFields {
+        emailOf
+        phoneOf {
+          target
+          title
+          url
+        }
+        mapView
+      }
+    }
+  }
+}

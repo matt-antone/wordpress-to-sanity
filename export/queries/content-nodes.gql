@@ -1,0 +1,18 @@
+query GetContentNodes {
+  contentNodes(first: 10) {
+    nodes {
+      date
+      id
+      ... on Cmg {
+        id
+        date
+        title
+      }
+      ... on Post {
+        id
+        date
+        title
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+query GetPosts {
+  posts(first: 100000) {
+    edges {
+      node {
+        content
+        articleFeaturedVideo {
+          articleVideoCode
+        }
+        date
+        featuredImage {
+          node {
+            altText
+            caption
+            date
+            mediaDetails {
+              file
+              height
+              width
+            }
+            slug
+            sourceUrl
+            title(format: RAW)
+          }
+        }
+        slug
+        title
+        postFields {
+          teamMember(first: 1) {
+            pageInfo {
+              hasPreviousPage
+              hasNextPage
+            }
+            nodes {
+              databaseId
+            }
+          }
+        }
+        seo {
+          title
+          twitterTitle
+          opengraphTitle
+          opengraphDescription
+        }
+        postId
+      }
+    }
+  }
+}

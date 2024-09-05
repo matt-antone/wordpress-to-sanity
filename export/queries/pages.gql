@@ -1,0 +1,24 @@
+query GetPages {
+  pages(first: 10000) {
+    nodes {
+      id
+      title
+      date
+      slug
+      content
+      featuredImage {
+        node {
+          altText
+          caption
+          mediaDetails {
+            file
+            height
+            width
+          }
+          sourceUrl
+          title
+        }
+      }
+    }
+  }
+}

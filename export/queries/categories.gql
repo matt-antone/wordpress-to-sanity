@@ -1,0 +1,9 @@
+query GetCategories {
+  categories(first: 10000000) {
+    nodes {
+      id
+      name
+      slug
+    }
+  }
+}

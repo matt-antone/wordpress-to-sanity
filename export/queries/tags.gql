@@ -1,0 +1,9 @@
+query GetTags {
+  tags(first: 1000) {
+    nodes {
+      id
+      name
+      slug
+    }
+  }
+}

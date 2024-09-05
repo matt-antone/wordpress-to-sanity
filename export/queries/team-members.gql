@@ -1,0 +1,90 @@
+query GetProfile {
+  teamMembers(first: 100) {
+    nodes {
+      teamMembersId
+      title
+      slug
+      teamMemberFields {
+        relatedPosts(first: 1000) {
+          nodes {
+            id
+            ... on Post {
+              id
+              title
+            }
+          }
+        }
+        biographyData {
+          descriptionTab
+          titleSelect
+        }
+        biographyImage {
+          node {
+            altText
+            caption
+            date
+            mediaDetails {
+              height
+              width
+              file
+            }
+            sourceUrl
+          }
+        }
+        card {
+          target
+          title
+          url
+        }
+        emailTeam
+        featuredVideo {
+          videoCode
+          videoTitle
+        }
+        linkedin {
+          url
+          title
+          target
+        }
+        position
+        practice
+        practiceAreasTeam {
+          edges {
+            node {
+              id
+              date
+              slug
+              ... on PracticeArea {
+                id
+                slug
+                title
+              }
+            }
+          }
+        }
+        seniorCounsel
+        topAssociate
+        titleSectionPractice
+        youtube {
+          target
+          title
+          url
+        }
+      }
+      date
+      featuredImage {
+        node {
+          altText
+          caption
+          mediaDetails {
+            file
+            height
+            width
+          }
+          sourceUrl
+        }
+      }
+      teamMemberId
+    }
+  }
+}
